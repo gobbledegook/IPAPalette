@@ -205,7 +205,7 @@
 		32DCEA0F15E426CC00D3B33A /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = Localization/th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E102081110BFC100B1F030 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = Localization/fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32E729E01444EC3700E2B07B /* IPAIconTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = IPAIconTemplate.pdf; path = Palette/IPAIconTemplate.pdf; sourceTree = SOURCE_ROOT; };
-		32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Sparkle-1.22.0/Sparkle.framework"; sourceTree = "<group>"; };
+		32EB0F3020A0F54A00E31FC5 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Sparkle-2.5.0/Sparkle.framework"; sourceTree = "<group>"; };
 		32EB972918D265900062A8FC /* ar */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Onizuka.strings; sourceTree = "<group>"; };
 		32EB972A18D265900062A8FC /* ca */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Onizuka.strings; sourceTree = "<group>"; };
 		32EB972B18D265900062A8FC /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Onizuka.strings; sourceTree = "<group>"; };
@@ -259,6 +259,7 @@
 		E93074B60A5C264700470842 /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = /System/Library/Frameworks/InputMethodKit.framework; sourceTree = "<absolute>"; };
 		E93074E00A5C2F1200470842 /* IPAInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAInputController.h; path = Palette/IPAInputController.h; sourceTree = SOURCE_ROOT; };
 		E93074E10A5C2F1200470842 /* IPAInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPAInputController.m; path = Palette/IPAInputController.m; sourceTree = SOURCE_ROOT; };
+		F21FE9652AD1CDA000B97476 /* IPAManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = IPAManager.entitlements; path = IPAManager/IPAManager.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,6 +405,7 @@
 		321F611817739FB2005B3255 /* IPAManager */ = {
 			isa = PBXGroup;
 			children = (
+				F21FE9652AD1CDA000B97476 /* IPAManager.entitlements */,
 				321F611A1773A0AA005B3255 /* IPAManager.h */,
 				321F611B1773A0AA005B3255 /* IPAManager.m */,
 				321F611C1773A0AA005B3255 /* main.m */,
@@ -829,15 +831,17 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = IPAManager/IPAManager.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 2020.01.26;
 				DEVELOPMENT_TEAM = 2X36V2JWP4;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Sparkle-1.22.0",
+					"$(PROJECT_DIR)/Sparkle-2.5.0",
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
@@ -847,7 +851,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Sparkle-2.5.0/Sparkle.framework/Versions/A/Headers";
 				INFOPLIST_FILE = IPAManager/Info.plist;
 				INSTALL_PATH = Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
@@ -866,6 +870,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = IPAManager/IPAManager.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -873,9 +878,10 @@
 				CURRENT_PROJECT_VERSION = 2020.01.26;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 2X36V2JWP4;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Sparkle-1.22.0",
+					"$(PROJECT_DIR)/Sparkle-2.5.0",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
@@ -886,7 +892,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Sparkle-2.5.0/Sparkle.framework/Versions/A/Headers";
 				INFOPLIST_FILE = IPAManager/Info.plist;
 				INSTALL_PATH = Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
@@ -1019,10 +1025,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 2020.01.26;
 				DEVELOPMENT_TEAM = 2X36V2JWP4;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**",
-				);
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_PASCAL_STRINGS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1070,10 +1073,7 @@
 				CURRENT_PROJECT_VERSION = 2020.01.26;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 2X36V2JWP4;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Sparkle-1.22.0/Sparkle.framework/Versions/A/Headers/**",
-				);
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_ENABLE_PASCAL_STRINGS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = NO;

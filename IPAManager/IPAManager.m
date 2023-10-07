@@ -378,7 +378,7 @@ shamelessly stolen from an older version of Sparkle.
 }*/
 
 #pragma mark SUUpdater Delegate
--(void)updaterWillRelaunchApplication:(SUUpdater*)updater
+-(void)updaterWillRelaunchApplication:(SPUStandardUpdaterController*)updater
 {
   #pragma unused (updater)
   NSUserDefaults* defs = [NSUserDefaults standardUserDefaults];

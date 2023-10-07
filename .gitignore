@@ -4,4 +4,4 @@ xcuserdata/
 *.xcworkspace
 *.dSYM.zip
 *.dSYM
-
+/Sparkle*
