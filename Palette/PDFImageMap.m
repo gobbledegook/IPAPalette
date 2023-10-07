@@ -190,8 +190,10 @@ static id gEventMonitor = NULL;
 
 -(void)stopTracking
 {
+ if (_trackingRect) {
   [self removeTrackingRect:_trackingRect];
   _trackingRect = 0;
+ }
 }
 
 -(void)resetCursorRects
