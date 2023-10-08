@@ -35,7 +35,7 @@
 	<key>LSBackgroundOnly</key>
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.7.0</string>
+	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>© Brian S. Hall, BLUGS.COM LLC, 2005-2020</string>
 	<key>NSMainNibFile</key>
