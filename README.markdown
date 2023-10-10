@@ -1,6 +1,8 @@
 ## This is IPA Palette version 2.3
 <http://blugs.com/IPA>
 
+Universal Binary for Macs with Apple silicon (M1/M2): <https://blyt.net/ipapalette/>
+
 ### What can you do with this thing?
 
 IPA Palette is a palette-class input method for OS X 10.6 and later.
@@ -15,7 +17,7 @@ magic to get it set up (`git submodule init` followed by `git submodule update`)
 
 IPA Manager relies on the Sparkle Framework for auto-update functionality.
 Download that and extract in the `IPAPalette` directory
-so that there is a path `IPAPalette/Sparkle-1.22.0`.
+so that there is a path `IPAPalette/Sparkle-2.5.0`.
 
 If you change any localizations (they're all in Localization/chardata.txt),
 run `./translator.py -s` to regenerate the *.strings files.
